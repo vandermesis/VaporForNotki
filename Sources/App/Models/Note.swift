@@ -16,9 +16,6 @@ final class Note: Model {
     @Field(key: "body")
     var body: String
     
-    @Field(key: "creation-date")
-    var creationDate: Date
-    
     init() {}
     
     init(
