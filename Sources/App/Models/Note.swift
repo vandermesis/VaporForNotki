@@ -1,10 +1,3 @@
-//
-//  File.swift
-//  
-//
-//  Created by Marek Skrzelowski on 19/11/2023.
-//
-
 import Vapor
 import Fluent
 
@@ -13,6 +6,9 @@ final class Note: Model {
     
     @ID
     var id: UUID?
+    
+    @Field(key: "creation-date")
+    var creationDate: Date
     
     @Field(key: "symbol-name")
     var symbolName: String
