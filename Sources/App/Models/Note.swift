@@ -7,11 +7,11 @@ final class Note: Model {
     @ID
     var id: UUID?
     
-    @Field(key: "creation-date")
-    var creationDate: Date
+    @Timestamp(key: "created_at", on: .create)
+    var createdAt: Date?
     
-    @Field(key: "symbol-name")
-    var symbolName: String
+    @OptionalField(key: "symbol_name")
+    var symbolName: String?
     
     @Field(key: "body")
     var body: String
@@ -20,14 +20,16 @@ final class Note: Model {
     
     init(
         id: UUID? = nil,
-        creationDate: Date = Date(),
-        symbolName: String,
+        createdAt: Date?,
+        symbolName: String?,
         body: String
     ) {
         self.id = id
-        self.creationDate = creationDate
+        self.createdAt = createdAt
         self.symbolName = symbolName
         self.body = body
     }
 }
+
+extension Note: Content {}
 

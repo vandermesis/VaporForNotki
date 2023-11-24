@@ -6,18 +6,20 @@ import Vapor
 
 public func configure(_ app: Application) async throws {
     app.databases.use(
-        DatabaseConfigurationFactory.postgres(configuration: .init(
-        hostname: Environment.get("DATABASE_HOST") ?? "localhost",
-        port: Environment.get("DATABASE_PORT").flatMap(Int.init(_:)) ??
-        SQLPostgresConfiguration.ianaPortNumber,
-        username: Environment.get("DATABASE_USERNAME") ?? "notki_username",
-        password: Environment.get("DATABASE_PASSWORD") ?? "notki_password",
-        database: Environment.get("DATABASE_NAME") ?? "notki_database",
-        tls: .prefer(try .init(configuration: .clientDefault)))
-    ), as: .psql)
-
+        .postgres(configuration: .init(
+            hostname: Environment.get("DATABASE_HOST") ?? "localhost",
+            port: Environment.get("DATABASE_PORT").flatMap(Int.init(_:)) ??
+            SQLPostgresConfiguration.ianaPortNumber,
+            username: Environment.get("DATABASE_USERNAME") ?? "vandermesis",
+            password: Environment.get("DATABASE_PASSWORD") ?? "1k0my0J1",
+            database: Environment.get("DATABASE_NAME") ?? "notes_database",
+            tls: .prefer(try .init(configuration: .clientDefault)))
+        ),
+        as: .psql
+    )
     app.migrations.add(CreateNote())
     app.logger.logLevel = .debug
     app.views.use(.leaf)
+    try await app.autoMigrate()
     try routes(app)
 }
