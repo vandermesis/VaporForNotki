@@ -10,23 +10,41 @@ final class Note: Model {
     @Timestamp(key: "created_at", on: .create)
     var createdAt: Date?
     
+    @Field(key: "body")
+    var body: String
+    
     @OptionalField(key: "symbol_name")
     var symbolName: String?
     
-    @Field(key: "body")
-    var body: String
+    @OptionalField(key: "weather")
+    var weather: String?
+    
+    @OptionalField(key: "temperature")
+    var temperature: String?
+    
+    @OptionalField(key: "coordinates")
+    var coordinates: String?
+    
+    @OptionalField(key: "localization_name")
+    var localizationName: String?
+    
+    // TODO: - Expand
+    @OptionalField(key: "phone_data")
+    var phoneData: String?
+    
+    // TODO: - Expand
+    @OptionalField(key: "health_data")
+    var healthData: String?
     
     init() {}
     
     init(
         id: UUID? = nil,
         createdAt: Date?,
-        symbolName: String?,
         body: String
     ) {
         self.id = id
         self.createdAt = createdAt
-        self.symbolName = symbolName
         self.body = body
     }
 }
