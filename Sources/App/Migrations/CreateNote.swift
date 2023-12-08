@@ -5,8 +5,14 @@ struct CreateNote: AsyncMigration {
         try await database.schema("notes")
             .id()
             .field("created_at", .datetime, .required)
-            .field("symbol_name", .string)
             .field("body", .string, .required)
+            .field("symbol_name", .string)
+            .field("weather", .string)
+            .field("temperature", .string)
+            .field("coordinates", .string)
+            .field("localization_name", .string)
+            .field("phone_data", .string)
+            .field("health_data", .string)
             .create()
     }
 

@@ -12,7 +12,7 @@ public func configure(_ app: Application) async throws {
             SQLPostgresConfiguration.ianaPortNumber,
             username: Environment.get("DATABASE_USERNAME") ?? "vandermesis",
             password: Environment.get("DATABASE_PASSWORD") ?? "1k0my0J1",
-            database: Environment.get("DATABASE_NAME") ?? "notes_database",
+            database: Environment.get("DATABASE_NAME") ?? "db",
             tls: .prefer(try .init(configuration: .clientDefault)))
         ),
         as: .psql
