@@ -22,9 +22,9 @@ volumes:
 x-shared_environment: &shared_environment
   LOG_LEVEL: ${LOG_LEVEL:-debug}
   DATABASE_HOST: db
-  DATABASE_NAME: notki_database
-  DATABASE_USERNAME: vandermesis
-  DATABASE_PASSWORD: 1k0my0J1
+  DATABASE_NAME: ${{ secrets.DATABASE_NAME }}
+  DATABASE_USERNAME: ${{ secrets.USERNAME }}
+  DATABASE_PASSWORD: ${{ secrets.PASSWORD }}
   
 services:
   app:
@@ -67,8 +67,8 @@ services:
       - db_data:/var/lib/postgresql/data/pgdata
     environment:
       PGDATA: /var/lib/postgresql/data/pgdata
-      POSTGRES_USER: vandermesis
-      POSTGRES_PASSWORD: 1k0my0J1
-      POSTGRES_DB: notki_database
+      POSTGRES_USER: ${{ secrets.USERNAME }}
+      POSTGRES_PASSWORD: ${{ secrets.PASSWORD }}
+      POSTGRES_DB: ${{ secrets.DB_NAME }}
     ports:
       - '5432:5432'
