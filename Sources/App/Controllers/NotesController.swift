@@ -4,10 +4,10 @@ import Vapor
 struct NotesController: RouteCollection {
   func boot(routes: RoutesBuilder) throws {
     let notes = routes.grouped("notes")
-    notes.get(use: index)
-    notes.post(use: create)
+    notes.get(use: index).description("List notes")
+    notes.post(use: create).description("Create note")
     notes.group(":noteID") { note in
-      note.delete(use: delete)
+      note.delete(use: delete).description("Delete note")
     }
   }
   
