@@ -50,4 +50,3 @@ final class Note: Model {
 }
 
 extension Note: Content {}
-
