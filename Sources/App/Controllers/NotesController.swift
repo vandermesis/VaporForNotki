@@ -12,7 +12,7 @@ struct NotesController: RouteCollection {
       note.delete(use: delete).description("Delete note")
     }
   }
-  
+
   func index(req: Request) async throws -> [Note] {
     try await Note.query(on: req.db).all()
   }
@@ -35,7 +35,11 @@ struct NotesController: RouteCollection {
 
   func update(req: Request) async throws -> Note {
     let updatedNote = try req.content.decode(Note.self)
-    guard let note = try await Note.find(req.parameters.get("noteID"), on: req.db) else { throw Abort(.notFound) }
+    guard let note = try await Note.find(
+      req.parameters.get("noteID"),
+      on: req.db) else {
+      throw Abort(.notFound)
+    }
     note.body = updatedNote.body
     note.id = updatedNote.id
     note.createdAt = updatedNote.createdAt

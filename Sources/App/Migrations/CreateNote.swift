@@ -15,7 +15,7 @@ struct CreateNote: AsyncMigration {
       .field("health_data", .string)
       .create()
   }
-  
+
   func revert(on database: Database) async throws {
     try await database.schema("notes").delete()
   }
