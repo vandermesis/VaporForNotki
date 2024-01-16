@@ -2,12 +2,14 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-
-  <title>#(title)</title>
+  <title>Swift Coding Robot </title>
 </head>
-
 <body>
-  <h1>#(title)</h1>
-  <h3>Vapor server for Notki app</h3>
+  <h1><font color = "red">My name is Marek Skrzelowski</font></h1>
+  <h3>I’m a experienced iOS and macOS developer, addicted to Swift, SOLID and Clean Code.</h3>
+  <h5>vanderemesis.com</h5>
+  <h5>marek.skrzelowski@vanderemesis.com</h5>
+  <h5>+48 790 312 896</h5>
+  <h5>Katowice Poland</h5>
 </body>
 </html>

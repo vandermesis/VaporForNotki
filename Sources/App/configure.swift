@@ -7,12 +7,12 @@ import Vapor
 public func configure(_ app: Application) async throws {
   app.databases.use(
     .postgres(configuration: .init(
-      hostname: Environment.get("DATABASE_HOST") ?? "db",
+      hostname: Environment.get("DATABASE_HOST") ?? "localhost",
       port: Environment.get("DATABASE_PORT").flatMap(Int.init(_:)) ??
       SQLPostgresConfiguration.ianaPortNumber,
       username: Environment.get("DATABASE_USERNAME") ?? "vandermesis",
       password: Environment.get("DATABASE_PASSWORD") ?? "1k0my0J1",
-      database: Environment.get("DATABASE_NAME") ?? "notki_database",
+      database: Environment.get("DATABASE_NAME") ?? "notes_database",
       tls: .prefer(try .init(configuration: .clientDefault)))
     ),
     as: .psql
