@@ -92,3 +92,5 @@ iOSInjectionProject/
 # DS Store
 .DS_Store
 Resources/Views/index.leaf.tmp.html
+docker-compose.yml
+docker-compose-run-only.yml

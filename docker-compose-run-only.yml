@@ -1,0 +1,34 @@
+version: '3.7'
+
+volumes:
+  db_data:
+
+services:
+  app:
+    image: ghcr.io/vandermesis/vandermesis/vaporfornotki:main
+    environment:
+      LOG_LEVEL: ${LOG_LEVEL:-debug}
+      DATABASE_HOST: db
+      DATABASE_NAME: notki
+      DATABASE_USERNAME: notkidb
+      DATABASE_PASSWORD: myqvi3-qaWcok-qowxiq
+    depends_on:
+      - db:
+        condition: service_healthy
+    ports:
+      - '8080:8080'
+    command:
+      ["serve", "--env", "production", "--hostname", "0.0.0.0", "--port", "8080"]
+  db:
+    image: postgres:16-alpine
+    healthcheck:
+      test: "exit 0"
+    volumes:
+      - db_data:/var/lib/postgresql/data/pgdata
+    environment:
+      PGDATA: /var/lib/postgresql/data/pgdata
+      POSTGRES_USER: notkidb
+      POSTGRES_PASSWORD: myqvi3-qaWcok-qowxiq
+      POSTGRES_DB: notki
+    ports:
+      - '5432:5432'
