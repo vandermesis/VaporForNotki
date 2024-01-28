@@ -17,6 +17,9 @@ public func configure(_ app: Application) async throws {
     ),
     as: .psql
   )
+  app.middleware.use(
+    FileMiddleware(publicDirectory: app.directory.publicDirectory)
+  )
   app.migrations.add(CreateNote())
   app.logger.logLevel = .debug
   app.views.use(.leaf)
