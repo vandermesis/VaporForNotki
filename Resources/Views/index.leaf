@@ -5,58 +5,86 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="keywords" content="iOS, macOS, Swift, Engineer, Personal, Profile, CV">
 <meta name="description" content="Software Engineer Personal Website">
-<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="icon" type="image/png" href="/images/favicon.png">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=DM Serif Display">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<title>Marek Skrzelowski - iOS and macOS Developer</title>
 <style>
-  .red {
-    color:#d23e00
-  }
   body { 
-    padding: 20px;
+    margin: 8%;
+    border-bottom: 4px solid #d23e00
   }
   h1 {
     color: black;
     font-family: "DM Serif Display Regular", "Georgia", serif;
+    font-size: 180%;
+    line-height: 1.2;
   }
   h4 {
     color: black;
     font-family: "Poppins", "Trebuchet MS", sans-serif;
+    line-height: 0.1;
   }
-  h5 {
-    color: #4d4d4d;
-    font-family: "Poppins", "Trebuchet MS", sans-serif;
+  .red {
+    color: #d23e00
   }
   .grid-container {
     display: grid;
-    grid-template-columns: 70% 30%;
+    grid-template-columns: auto auto;
   }
-  a:link {
-    color: #4d4d4d; text-decoration: none;
+  .bio {
+    margin-bottom: 100%;
   }
-  a:visited {
-    color: #d23e00; text-decoration: none;
+  .contact {
+    cursor: crosshair;
+    text-align: right;
   }
-  a:hover {
-    color: #d23e00; text-decoration: none;
+  img {
+    opacity: 0.6;
+  }
+  img:hover {
+    opacity: 1;
+    cursor: crosshair;
+    transform: scale(120%);
   }
 </style>
-<title>Marek Skrzelowski - iOS/macOS Developer</title>
 </head>
 <body>
 <div class="grid-container">
-  <div>
-    <h4><b>MAREK SKRZELOWSKI</b></h4>
-    <h1>I’m a <strong class="red">Experienced Swift Software Engineer</strong>
+  <div class="bio">
+    <h4>MAREK SKRZELOWSKI</h4>
+    <h1>I’m a <span class="red">Experienced Swift Software Engineer</span>
       <br> with over 4 years' history of delivering
       <br> Swift, SOLID and Clean Code.
     </h1>
   </div>
-  <div>
-    <h5><a href="vanderemesis.com">vandermesis.com</a></h5>
-    <h5><a href="mailto:marek.skrzelowski@vanderemesis.com">marek.skrzelowski@vanderemesis.com</a></h5>
-    <h5>+48 790 312 896</h5>
-    <h5>Katowice/Poland</h5>
+  <div class="contact">
+    <p class="linkedin">
+      <a href="https://linkedin.com/in/vandermesis">
+        <img width="24" height="24" type="image/svg" src="/images/linkedin_black.svg" alt="LinkedIn"/>
+      </a>
+    </p>
+    <p class="github">
+      <a href="https://github.com/vandermesis">
+        <img width="24" height="24" type="image/svg" src="/images/github_black.svg" alt="Github" />
+      </a>
+    </p>
+    <p class="cv">
+      <a href="https://read.cv/vandermesis">
+        <img width="32" height="32" type="image/svg" src="/images/cv_white.svg" alt="CV" />
+      </a>
+    </p>
+    <p class="bento">
+      <a href="https://bento.me/vandermesis">
+        <img width="24" height="24" type="image/svg" src="/images/bento_black.svg" alt="Bento" />
+      </a>
+    </p>
+    <p class="polywork">
+      <a href="https://www.polywork.com/vandermesis">
+        <img width="21" height="21" type="image/svg" src="/images/polywork_black.svg" alt="Polywork" />
+      </a>
+    </p>
   </div>
 </div>
 </body>
