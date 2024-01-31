@@ -20,16 +20,15 @@
   h1 {
     color: black;
     font-family: "DM Serif Display", "Georgia", serif;
-    font-size: 3vw;
+    font-size: 2.75vw;
     font-weight: normal;
-    line-height: 1.2;
+    line-height: 1.3;
     letter-spacing: 1px;
   }
   h4 {
     color: gray;
     font-family: "Poppins", "Trebuchet MS", sans-serif;
-    font-size: 1.7vw;
-    line-height: 0.1;
+    font-size: 1.5vw;
   }
   .red {
     color: #d23e00
@@ -49,18 +48,17 @@
   }
   img:hover {
     opacity: 1;
-    cursor: crosshair;
     transform: scale(120%);
   }
   .animation {
     padding-bottom: 2em;
-    margin-left: -0.65em;
+    margin-left: -1em;
     width: 30%;
     height: 30%;
   }
   @media screen and (max-width: 736px) {
     h1 {
-      font-size: 8vw;
+      font-size: 6vw;
     }
     h4 {
       font-size: 3vw;
@@ -76,9 +74,12 @@
 <div class="grid-container">
   <div class="bio">
     <h4>MAREK SKRZELOWSKI</h4>
-    <h1>I’m a <span class="red">Experienced Swift Software Engineer</span>
-      <br> with over 4 years' history of delivering
-      <br> Swift, SOLID and Clean Code.
+    <h1>
+      I’m a <span class="red">Experienced iOS and macOS Developer</span><br>
+      passionate about <span class="red">Swift, SOLID and Clean code.</span><br>
+      <span class="red">macOS and iOS</span> are my air and water.<br>
+      Since 2020 I build mobile and desktop applications<br>
+      using both <span class="red">UIKit and SwiftUI.</span><br>
     </h1>
   </div>
   <div class="contact">
