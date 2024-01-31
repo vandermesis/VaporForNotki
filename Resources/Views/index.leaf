@@ -23,10 +23,12 @@
     font-size: 3vw;
     font-weight: normal;
     line-height: 1.2;
+    letter-spacing: 1px;
   }
   h4 {
     color: gray;
     font-family: "Poppins", "Trebuchet MS", sans-serif;
+    font-size: 1.7vw;
     line-height: 0.1;
   }
   .red {
@@ -37,10 +39,9 @@
     grid-template-columns: auto auto;
   }
   .bio {
-    margin-bottom: 50%;
+    margin-bottom: 20%;
   }
   .contact {
-    cursor: crosshair;
     text-align: right;
   }
   img {
@@ -50,6 +51,24 @@
     opacity: 1;
     cursor: crosshair;
     transform: scale(120%);
+  }
+  .animation {
+    padding-bottom: 2em;
+    margin-left: -0.65em;
+    width: 30%;
+    height: 30%;
+  }
+  @media screen and (max-width: 736px) {
+    h1 {
+      font-size: 8vw;
+    }
+    h4 {
+      font-size: 3vw;
+    }
+    .animation {
+      width: 75%;
+      height: 75%;
+    }
   }
 </style>
 </head>
@@ -90,7 +109,9 @@
     </p>
   </div>
 </div>
+  <div class="animation">
   <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script> 
-  <dotlottie-player src="https://lottie.host/944e3af9-9ea1-4786-9f91-6d950e535b73/1WBp7u0iRj.json" background="transparent" speed="1" style="width: 300px; height: 300px;" loop autoplay></dotlottie-player>
+  <dotlottie-player src="https://lottie.host/944e3af9-9ea1-4786-9f91-6d950e535b73/1WBp7u0iRj.json" background="transparent" speed="1" loop autoplay></dotlottie-player>
+  </div>
 </body>
 </html>
