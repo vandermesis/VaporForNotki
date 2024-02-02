@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 <title>Marek Skrzelowski - iOS and macOS Developer</title>
 <style>
@@ -27,9 +27,8 @@
   }
   h4 {
     color: gray;
-    font-family: "Poppins", "Trebuchet MS", sans-serif;
+    font-family: "JetBrains Mono", "Roboto Mono", monospace;
     font-size: 1.5vw;
-    line-height: 0.1;
   }
   .red {
     color: #d23e00
@@ -43,6 +42,13 @@
   }
   .contact {
     text-align: right;
+    grid-row-start: 2;
+  }
+  .animation {
+    width: 25vw;
+    height: 25vw;
+    grid-column-start: 1;
+    grid-row-start: 2;
   }
   img {
     opacity: 0.6;
@@ -50,12 +56,6 @@
   img:hover {
     opacity: 1;
     transform: scale(120%);
-  }
-  .animation {
-    padding-bottom: 1em;
-    margin-left: -1.2em;
-    width: 30%;
-    height: 30%;
   }
   @media screen and (max-width: 736px) {
     h1 {
@@ -65,9 +65,9 @@
       font-size: 3vw;
     }
     .animation {
-      margin-left: -1.6em;
-      width: 75%;
-      height: 75%;
+      margin-left: -5vw;
+      width: 55vw;
+      height: 85vw;
     }
   }
 </style>
@@ -75,12 +75,11 @@
 <body>
 <div class="grid-container">
   <div class="bio">
-    <h4>MAREK SKRZELOWSKI</h4>
+    <h4>{ Marek Skrzelowski }</h4>
     <h1>
       I’m a <span class="red">Experienced iOS and macOS Developer</span><br>
       passionate about <span class="red">Swift, SOLID and Clean code.</span><br>
-      <span class="red">macOS and iOS</span> are my air and water.<br>
-      Since 2020 I build mobile and desktop applications<br>
+      Since <span class="red">2020</span> I build mobile and desktop applications<br>
       using both <span class="red">UIKit and SwiftUI.</span><br>
     </h1>
   </div>
@@ -111,10 +110,10 @@
       </a>
     </p>
   </div>
-</div>
   <div class="animation">
-  <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script> 
-  <dotlottie-player src="https://lottie.host/944e3af9-9ea1-4786-9f91-6d950e535b73/1WBp7u0iRj.json" background="transparent" speed="1" loop autoplay></dotlottie-player>
+      <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script> 
+      <dotlottie-player src="https://lottie.host/944e3af9-9ea1-4786-9f91-6d950e535b73/1WBp7u0iRj.json" background="transparent" speed="1" loop autoplay></dotlottie-player>
   </div>
+</div>
 </body>
 </html>
