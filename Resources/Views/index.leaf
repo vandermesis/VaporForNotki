@@ -39,10 +39,12 @@
   }
   .bio {
     margin-bottom: 20%;
+    grid-row-start: 1;
+    grid-column-start: 1;
   }
   .contact {
     text-align: right;
-    grid-row-start: 2;
+    grid-row-start: 1;
   }
   .animation {
     width: 25vw;
@@ -63,6 +65,9 @@
     }
     h4 {
       font-size: 3vw;
+    }
+    .contact {
+      grid-row-start: 2;
     }
     .animation {
       margin-left: -5vw;
