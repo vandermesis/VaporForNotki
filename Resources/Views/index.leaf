@@ -99,11 +99,6 @@
         <img width="24" height="24" type="image/svg" src="/images/github_black.svg" alt="Github" />
       </a>
     </p>
-    <p class="cv">
-      <a href="https://read.cv/vandermesis">
-        <img width="32" height="32" type="image/svg" src="/images/cv_white.svg" alt="CV" />
-      </a>
-    </p>
     <p class="bento">
       <a href="https://bento.me/vandermesis">
         <img width="24" height="24" type="image/svg" src="/images/bento_black.svg" alt="Bento" />
@@ -112,6 +107,11 @@
     <p class="polywork">
       <a href="https://www.polywork.com/vandermesis">
         <img width="21" height="21" type="image/svg" src="/images/polywork_black.svg" alt="Polywork" />
+      </a>
+    </p>
+    <p class="cv">
+      <a href="https://read.cv/vandermesis">
+        <img width="32" height="32" type="image/svg" src="/images/cv_white.svg" alt="CV" />
       </a>
     </p>
   </div>
